@@ -1,4 +1,4 @@
-bmcgehee/compose-wordpress:
+bmcgehee/compose-wordpress:\
   Build:
 	  - echo "Nothing to build"
 	PkgInclude:
