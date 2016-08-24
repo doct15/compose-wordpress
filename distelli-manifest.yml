@@ -1,0 +1,15 @@
+bmcgehee/compose-wordpress:
+  Build:
+	  - echo "Nothing to build"
+	PkgInclude:
+	  - '*'
+	Env:
+	  # Set Env variables here
+	  - PORT: "8000"
+	Exec:
+	  - cd $DISTELLI_INSTALLHOME
+	  - sudo /usr/local/bin/docker-compose up
+	PostStart:
+	  - publicip=$(curl -s ident.me) || true
+	  - 'echo "You can validate the install by pointing your browser at http://$publicip"'
+	  
