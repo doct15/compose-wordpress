@@ -3,7 +3,7 @@ bmcgehee/compose-wordpress:
     - echo "Nothing to build"
   PkgInclude:
     - '*'
-	Env:
+  Env:
     # Set Env variables here
     - PORT: "8000"
   Exec:
